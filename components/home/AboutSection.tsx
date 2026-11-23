@@ -2,46 +2,26 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function AboutSection() {
   return (
     <section id="about" className="bg-white py-20 lg:py-28 text-slate-900 border-b border-slate-200 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
-          {/* Left Column: Tech Graphic / Security Lock on Circuit Board */}
-          <div className="lg:col-span-5">
-            <div className="relative rounded-3xl bg-gradient-to-br from-[#070D18] to-[#0F1E36] p-8 sm:p-12 border border-slate-200 shadow-2xl overflow-hidden flex items-center justify-center min-h-[380px]">
-              
-              {/* Circuit Board Wireframe Overlay */}
-              <div className="absolute inset-0 opacity-15 pointer-events-none">
-                <svg width="100%" height="100%">
-                  <pattern id="circuitGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-                    <path d="M 0 20 L 40 20 M 20 0 L 20 40" stroke="#00C875" strokeWidth="0.8" />
-                    <circle cx="20" cy="20" r="2.5" fill="#00D2FF" />
-                  </pattern>
-                  <rect width="100%" height="100%" fill="url(#circuitGrid)" />
-                </svg>
-              </div>
 
-              {/* Glowing Security Padlock Visual */}
-              <div className="relative z-10 flex flex-col items-center justify-center text-center">
-                <div className="w-24 h-24 rounded-3xl bg-gradient-to-br from-[#00C875]/20 via-[#00D2FF]/20 to-transparent border-2 border-[#00C875] flex items-center justify-center shadow-[0_0_40px_rgba(0,200,117,0.3)] mb-6 animate-pulse">
-                  <svg className="w-12 h-12 text-[#00E599]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                </div>
-                <span className="text-xs font-mono font-bold tracking-widest text-[#00E599] uppercase">
-                  ENTERPRISE SECURITY &amp; RELIABILITY
-                </span>
-                <p className="text-white font-bold text-lg mt-1">
-                  Engineered Since 2008
-                </p>
-                <p className="text-slate-400 text-xs font-mono mt-1">
-                  Bangalore HQ • ISO 27001 Certified
-                </p>
-              </div>
-
+          {/* Left Column: Security Lock Image from orvanetworks.com */}
+          <div className="lg:col-span-5 h-full flex items-center">
+            <div className="relative w-full h-[360px] sm:h-[420px] lg:h-[480px] xl:h-[500px] rounded-3xl overflow-hidden border border-slate-200/80 shadow-2xl group bg-[#070D18]">
+              <Image
+                src="/images/about-gold-lock.jpg"
+                alt="Orva Networks Enterprise Security & Infrastructure"
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover object-center rounded-3xl transition-transform duration-500 group-hover:scale-105"
+                priority
+              />
+              <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10 pointer-events-none" />
             </div>
           </div>
 
