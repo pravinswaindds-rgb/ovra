@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { ServiceCard, type ServiceItem } from "./ServiceCard";
+export type { ServiceItem };
 
-const allServices: ServiceItem[] = [
+export const allServices: ServiceItem[] = [
   // 1. Networking Solutions
   {
     id: "networking-solutions",
@@ -11,7 +12,7 @@ const allServices: ServiceItem[] = [
     description:
       "Robust networking solutions including structured cabling, switches, smart routers, and network optimization tools to ensure stability, performance, and scalability.",
     category: "Networking",
-    href: "/solutions/enterprise-networking",
+    href: "/services/networking-solutions",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
@@ -26,7 +27,7 @@ const allServices: ServiceItem[] = [
     description:
       "Modern IP-based telephony systems that improve communication efficiency with smart call routing, voicemail, and CRM integration – ideal for dynamic, multi-location teams.",
     category: "Collaboration",
-    href: "/solutions/wireless-smart-campus",
+    href: "/services/telephony-solutions",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -41,7 +42,7 @@ const allServices: ServiceItem[] = [
     description:
       "Seamless, enterprise-grade wireless connectivity across offices, campuses, and remote sites. High-speed, secure, and scalable to meet growing demands.",
     category: "Networking",
-    href: "/solutions/wireless-smart-campus",
+    href: "/services/wireless-solutions",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
@@ -56,7 +57,7 @@ const allServices: ServiceItem[] = [
     description:
       "Advanced network and endpoint security solutions including firewall protection, threat detection, access control, and DNS-level defense to safeguard your digital infrastructure.",
     category: "Security",
-    href: "/solutions/cybersecurity",
+    href: "/services/security-solution",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -71,7 +72,7 @@ const allServices: ServiceItem[] = [
     description:
       "Reliable, scalable, and high-performance storage systems for all business sizes. We provide secure data storage, backup, and disaster recovery solutions for both on-premise and hybrid environments.",
     category: "Networking",
-    href: "/solutions/enterprise-networking",
+    href: "/services/storage-solutions",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
@@ -86,7 +87,7 @@ const allServices: ServiceItem[] = [
     description:
       "We provide reliable, scalable, and secure server infrastructure tailored to your business needs. From on-premise deployments to cloud-integrated setups, Orva ensures optimal performance and data security.",
     category: "Networking",
-    href: "/solutions/enterprise-networking",
+    href: "/services/server-solutions",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
@@ -101,7 +102,7 @@ const allServices: ServiceItem[] = [
     description:
       "Secure your network from malware, phishing, and unsafe websites with AI-powered DNS filtering. Control web access and enhance browsing safety across all endpoints.",
     category: "Security",
-    href: "/solutions/cybersecurity",
+    href: "/services/dns-filtering-protection",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -116,7 +117,7 @@ const allServices: ServiceItem[] = [
     description:
       "From smart cities to healthcare, Orva delivers intelligent DNS and NAC security for diverse environments. Our solutions ensure device authentication, policy enforcement, and seamless network control.",
     category: "Networking",
-    href: "/#industries",
+    href: "/services/industries-serve",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -146,7 +147,7 @@ const allServices: ServiceItem[] = [
     description:
       "Monitor and manage your entire IT environment remotely via a unified cloud dashboard. Perfect for multi-location businesses and proactive IT teams seeking centralized visibility.",
     category: "Cloud & AI",
-    href: "/solutions/enterprise-networking",
+    href: "/services/cloud-dashboard-remote-management",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z" />
@@ -237,7 +238,7 @@ const allServices: ServiceItem[] = [
     description:
       "Every industry has unique needs. That's why we deliver tailor-made IoT deployments for sectors like healthcare, manufacturing, logistics, agriculture, and retail.",
     category: "IoT & OT",
-    href: "/#industries",
+    href: "/industries",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -454,6 +455,13 @@ export function ServicesSection() {
   // Pointer drag event handlers (supports both mouse drag and touch swipe)
   const handlePointerDown = (e: React.PointerEvent) => {
     if (e.button !== 0) return;
+
+    // Check if clicked element is an interactive link or button (e.g. Explore More)
+    const target = e.target as HTMLElement | null;
+    if (target?.closest("a, button")) {
+      return; // Do NOT capture or prevent default; allow clean navigation
+    }
+
     if (resumeTimeoutRef.current) clearTimeout(resumeTimeoutRef.current);
     setIsPaused(true);
     setIsDragging(true);
@@ -461,13 +469,15 @@ export function ServicesSection() {
     setDragOffset(0);
     setHasMoved(false);
     setIsTransitioning(false);
-    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    try {
+      (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    } catch { }
   };
 
   const handlePointerMove = (e: React.PointerEvent) => {
     if (!isDragging) return;
     const deltaX = e.clientX - dragStartX;
-    if (Math.abs(deltaX) > 6) {
+    if (Math.abs(deltaX) > 15) {
       setHasMoved(true);
     }
     setDragOffset(deltaX);
@@ -477,7 +487,7 @@ export function ServicesSection() {
     if (!isDragging) return;
     try {
       (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
-    } catch {}
+    } catch { }
 
     setIsDragging(false);
     setIsTransitioning(true);
@@ -500,7 +510,7 @@ export function ServicesSection() {
     if (!isDragging) return;
     try {
       (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
-    } catch {}
+    } catch { }
     setIsDragging(false);
     setIsTransitioning(true);
     setDragOffset(0);
@@ -509,6 +519,12 @@ export function ServicesSection() {
 
   // Prevent link navigation if the user dragged/swiped rather than clicking
   const handleClickCapture = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement | null;
+    if (target?.closest("a, button")) {
+      if (!hasMoved || Math.abs(dragOffset) < 15) {
+        return; // Allow the click to proceed directly to the Link
+      }
+    }
     if (hasMoved) {
       e.preventDefault();
       e.stopPropagation();
@@ -555,11 +571,10 @@ export function ServicesSection() {
                     setCurrentIndex(BUFFER + idx);
                     scheduleAutoResume(2500);
                   }}
-                  className={`h-2 transition-all duration-500 ease-out rounded-full ${
-                    isActive
+                  className={`h-2 transition-all duration-500 ease-out rounded-full ${isActive
                       ? "w-7 sm:w-8 bg-[#00C875] shadow-xs"
                       : "w-2 bg-slate-300 hover:bg-slate-400"
-                  }`}
+                    }`}
                   aria-label={`Go to slide ${idx + 1}: ${service.title}`}
                   aria-selected={isActive}
                   role="tab"
@@ -571,9 +586,8 @@ export function ServicesSection() {
 
         {/* Draggable Automatic 3-Card Carousel Track */}
         <div
-          className={`relative overflow-hidden py-3 touch-pan-y ${
-            isDragging ? "cursor-grabbing" : "cursor-grab"
-          }`}
+          className={`relative overflow-hidden py-3 touch-pan-y ${isDragging ? "cursor-grabbing" : "cursor-grab"
+            }`}
           onMouseEnter={handleMouseEnter}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
@@ -584,11 +598,10 @@ export function ServicesSection() {
           onClickCapture={handleClickCapture}
         >
           <div
-            className={`flex will-change-transform ${
-              isTransitioning
+            className={`flex will-change-transform ${isTransitioning
                 ? "transition-transform duration-700 ease-in-out"
                 : "transition-none"
-            }`}
+              }`}
             style={{
               transform: `translateX(calc(-${(currentIndex * 100) / visibleCount}% + ${dragOffset}px))`,
             }}

@@ -78,7 +78,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
             {/* 2. About Us */}
             <Link
-              href="/#about"
+              href="/about"
               onClick={onClose}
               className="px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-white/5 hover:text-[#00C875] transition-colors"
             >
@@ -87,75 +87,146 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
             {/* 3. Services (collapsible) */}
             <div className="py-1">
-              <button
-                type="button"
-                onClick={() => setServicesExpanded(!servicesExpanded)}
-                className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-white/5 hover:text-[#00C875] transition-colors"
-              >
-                <span>Services</span>
-                <svg
-                  className={`w-4 h-4 text-slate-400 transition-transform ${
-                    servicesExpanded ? "rotate-180 text-[#00C875]" : ""
-                  }`}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+              <div className="flex items-center justify-between px-4 py-3 rounded-xl hover:bg-white/5 transition-colors">
+                <Link
+                  href="/services"
+                  onClick={onClose}
+                  className="text-base font-medium text-slate-200 hover:text-[#00C875]"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
+                  Services
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => setServicesExpanded(!servicesExpanded)}
+                  className="p-1 text-slate-400 hover:text-[#00C875]"
+                  aria-label="Expand services"
+                >
+                  <svg
+                    className={`w-4 h-4 transition-transform ${servicesExpanded ? "rotate-180 text-[#00C875]" : ""
+                      }`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
 
               {servicesExpanded && (
-                <div className="mt-1 space-y-1 pl-4 border-l border-white/10 ml-4 animate-in fade-in duration-150">
-                  <Link
-                    href="/#services"
-                    onClick={onClose}
-                    className="block px-3 py-2 text-xs text-slate-300 hover:text-[#00C875] rounded-lg"
-                  >
-                    DNS Filtering &amp; Protection
-                  </Link>
-                  <Link
-                    href="/#services"
-                    onClick={onClose}
-                    className="block px-3 py-2 text-xs text-slate-300 hover:text-[#00C875] rounded-lg"
-                  >
-                    Network Access Control (NAC)
-                  </Link>
-                  <Link
-                    href="/#services"
-                    onClick={onClose}
-                    className="block px-3 py-2 text-xs text-slate-300 hover:text-[#00C875] rounded-lg"
-                  >
-                    Networking &amp; Structured Cabling
-                  </Link>
-                  <Link
-                    href="/#services"
-                    onClick={onClose}
-                    className="block px-3 py-2 text-xs text-slate-300 hover:text-[#00C875] rounded-lg"
-                  >
-                    Server &amp; Storage Solutions
-                  </Link>
-                  <Link
-                    href="/#services"
-                    onClick={onClose}
-                    className="block px-3 py-2 text-xs text-slate-300 hover:text-[#00C875] rounded-lg"
-                  >
-                    Industrial OT Solutions
-                  </Link>
-                  <Link
-                    href="/#services"
-                    onClick={onClose}
-                    className="block px-3 py-2 text-xs text-[#00C875] font-semibold"
-                  >
-                    View All Services →
-                  </Link>
+                <div className="mt-2 space-y-4 pl-3 border-l border-white/10 ml-3 animate-in fade-in duration-150 max-h-[60vh] overflow-y-auto">
+                  {/* Category 1: SOLUTIONS */}
+                  <div>
+                    <span className="text-[10px] font-mono font-bold tracking-widest text-[#00C875] uppercase block px-2 mb-1">
+                      SOLUTIONS
+                    </span>
+                    <div className="space-y-0.5">
+                      <Link href="/services/server-solutions" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Server solutions
+                      </Link>
+                      <Link href="/services/storage-solutions" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Storage Solutions
+                      </Link>
+                      <Link href="/services/security-solution" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Security Solution
+                      </Link>
+                      <Link href="/services/wireless-solutions" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Wireless Solutions
+                      </Link>
+                      <Link href="/services/telephony-solutions" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Telephony Solutions
+                      </Link>
+                      <Link href="/services/networking-solutions" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Networking Solutions
+                      </Link>
+                      <Link href="/services/audio-visual-av" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Audio-Visual (AV)
+                      </Link>
+                      <Link href="/services/video-conferencing" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Video conferencing
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Category 2: IOT SOLUTIONS */}
+                  <div>
+                    <span className="text-[10px] font-mono font-bold tracking-widest text-[#00C875] uppercase block px-2 mb-1">
+                      IOT SOLUTIONS
+                    </span>
+                    <div className="space-y-0.5">
+                      <Link href="/services/iot-network-design" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        IoT Network Design
+                      </Link>
+                      <Link href="/services/smart-device-integration" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Smart Device Integration
+                      </Link>
+                      <Link href="/services/ai-data-insights" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        AI-Driven Data Insights
+                      </Link>
+                      <Link href="/services/end-to-end-security" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        End-to-End Security
+                      </Link>
+                      <Link href="/services/cloud-edge-computing" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Cloud &amp; Edge Computing
+                      </Link>
+                      <Link href="/services/custom-industry-solutions" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Custom Industry Solutions
+                      </Link>
+                      <Link href="/services/dns-filtering-protection" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        DNS Filtering &amp; Protection
+                      </Link>
+                      <Link href="/services/network-access-control" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Network Access Control (NAC)
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Category 3: AI & OT SOLUTIONS */}
+                  <div>
+                    <span className="text-[10px] font-mono font-bold tracking-widest text-[#00C875] uppercase block px-2 mb-1">
+                      AI &amp; OT SOLUTIONS
+                    </span>
+                    <div className="space-y-0.5">
+                      <Link href="/services/ai-solutions" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        AI Solutions
+                      </Link>
+                      <Link href="/services/ai-capabilities" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Our AI Capabilities Include
+                      </Link>
+                      <Link href="/services/ot-solutions" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        OT Solutions
+                      </Link>
+                      <Link href="/services/industries-serve" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Industries We Serve
+                      </Link>
+                      <Link href="/services/ai-automation" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        AI &amp; Automation
+                      </Link>
+                      <Link href="/services/analytics-reporting" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Analytics &amp; Reporting
+                      </Link>
+                      <Link href="/services/cloud-dashboard-remote-management" onClick={onClose} className="block px-2 py-1.5 text-xs text-slate-300 hover:text-[#00C875] rounded-md">
+                        Cloud Dashboard &amp; Remote Management
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="pt-2 border-t border-white/10">
+                    <Link
+                      href="/services"
+                      onClick={onClose}
+                      className="block px-2 py-1.5 text-xs text-[#00C875] font-semibold hover:underline"
+                    >
+                      View All 23 Solutions Grid →
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
 
             {/* 4. Industries */}
             <Link
-              href="/#industries"
+              href="/industries"
               onClick={onClose}
               className="px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-white/5 hover:text-[#00C875] transition-colors"
             >
@@ -164,7 +235,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
             {/* 5. Company */}
             <Link
-              href="/#about"
+              href="/company"
               onClick={onClose}
               className="px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-white/5 hover:text-[#00C875] transition-colors"
             >

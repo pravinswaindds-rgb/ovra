@@ -134,6 +134,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/company" className="hover:text-[#00C875] transition-colors">
+                  Company &amp; Leadership
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="hover:text-[#00C875] transition-colors">
                   Contact &amp; 24/7 Support Desk
                 </Link>

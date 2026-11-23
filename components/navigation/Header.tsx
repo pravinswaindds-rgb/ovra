@@ -156,7 +156,7 @@ export function Header() {
 
             {/* 2. About Us */}
             <Link
-              href="/#about"
+              href="/about"
               className="px-3.5 py-2 text-sm font-medium text-slate-200 hover:text-white rounded-md transition-colors hover:bg-white/5"
             >
               About Us
@@ -168,11 +168,9 @@ export function Header() {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button
-                type="button"
+              <Link
+                href="/services"
                 className="inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium text-slate-200 hover:text-white rounded-md transition-colors hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-[#00C875]"
-                aria-expanded={servicesOpen}
-                onClick={() => setServicesOpen(!servicesOpen)}
               >
                 <span>Services</span>
                 <svg
@@ -185,7 +183,7 @@ export function Header() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
 
               <MegaMenu
                 isOpen={servicesOpen}
@@ -195,7 +193,7 @@ export function Header() {
 
             {/* 4. Industries */}
             <Link
-              href="/#industries"
+              href="/industries"
               className="px-3.5 py-2 text-sm font-medium text-slate-200 hover:text-white rounded-md transition-colors hover:bg-white/5"
             >
               Industries
@@ -203,7 +201,7 @@ export function Header() {
 
             {/* 5. Company */}
             <Link
-              href="/#about"
+              href="/company"
               className="px-3.5 py-2 text-sm font-medium text-slate-200 hover:text-white rounded-md transition-colors hover:bg-white/5"
             >
               Company

@@ -40,8 +40,12 @@ export function ServiceCard({ service }: ServiceCardProps) {
       <div className="pt-6 border-t border-slate-100 flex items-center">
         <Link
           href={service.href}
-          className="inline-flex items-center gap-3 text-sm sm:text-base font-semibold text-slate-800 group-hover:text-[#00875A] transition-colors group/btn"
+          className="inline-flex items-center gap-3 text-sm sm:text-base font-semibold text-slate-800 hover:text-[#00875A] transition-colors group/btn relative z-20 pointer-events-auto cursor-pointer"
           draggable={false}
+          onClick={(e) => {
+            // Stop propagation to prevent drag track from interfering
+            e.stopPropagation();
+          }}
         >
           <span className="w-8 h-8 rounded-full bg-emerald-50 text-[#00875A] border border-[#00C875]/25 group-hover:bg-[#00C875] group-hover:text-slate-950 flex items-center justify-center transition-all duration-200 shadow-xs group-hover/btn:scale-110">
             <svg
@@ -53,7 +57,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </span>
-          <span>Explore More</span>
+          <span className="group-hover/btn:underline">Explore More</span>
         </Link>
       </div>
     </div>
