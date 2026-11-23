@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas-obsidian: #070C14;
+  --color-canvas-navy: #0B131F;
+  --color-canvas-surface: #101B2B;
+  --color-canvas-elevated: #16243A;
+
+  /* Infoblox Signature Emerald / Forest Palette */
+  --color-brand-emerald: #00C875;
+  --color-brand-emerald-hover: #00E585;
+  --color-brand-forest: #00875A;
+  --color-brand-forest-dark: #006C44;
+  
+  /* Infoblox Accents */
+  --color-brand-cyan: #00D2FF;
+  --color-brand-orange: #FF5A36;
+  --color-brand-amber: #FFAE00;
+
+  --color-light-bg: #FFFFFF;
+  --color-light-surface: #F4F6F8;
+  --color-light-card: #F8FAFC;
+
+  --font-sans: var(--font-geist-sans), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), "Fira Code", monospace;
+}
+
+:root {
+  --color-emerald: #00C875;
+  --color-emerald-hover: #00E585;
+  --color-forest: #00875A;
+  --color-cyan: #00D2FF;
+  --color-orange: #FF5A36;
+  --color-amber: #FFAE00;
+  --color-dark-bg: #070C14;
+  --color-dark-navy: #0B131F;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #070C14;
+  color: #0F172A;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070C14;
+}
+::-webkit-scrollbar-thumb {
+  background: #16243A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00C875;
+}
+
+/* Accessible focus outline */
+:focus-visible {
+  outline: 2px solid #00C875;
+  outline-offset: 2px;
+}
+
+/* Smooth Infoblox Infinite Marquee Keyframes */
+@keyframes marquee-scroll-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-scroll-right {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-left 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-right 45s linear infinite;
+  will-change: transform;
+}
+
+.marquee-paused {
+  animation-play-state: paused !important;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation: none !important;
+    transform: none !important;
+  }
+}
