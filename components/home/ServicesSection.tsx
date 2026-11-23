@@ -132,7 +132,7 @@ export const allServices: ServiceItem[] = [
     description:
       "Orva bridges the gap between IT and industrial operations with secure, scalable OT solutions. We help industries monitor, control, and optimize critical systems with real-time insights and robust architecture.",
     category: "IoT & OT",
-    href: "/solutions/industrial-utility-it",
+    href: "/services/ot-solutions",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -162,7 +162,7 @@ export const allServices: ServiceItem[] = [
     description:
       "Maximize operational efficiency with Orva's AI-powered automation solutions. We streamline business and IT workflows, reduce manual effort, and accelerate productivity through intelligent automation.",
     category: "Cloud & AI",
-    href: "/solutions/enterprise-networking",
+    href: "/services/ai-automation",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -178,7 +178,7 @@ export const allServices: ServiceItem[] = [
     description:
       "Authenticate, monitor, and manage every device on your network. Our NAC solutions enforce security policies and ensure only authorized access to your infrastructure.",
     category: "Security",
-    href: "/solutions/cybersecurity",
+    href: "/services/network-access-control",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
@@ -193,7 +193,7 @@ export const allServices: ServiceItem[] = [
     description:
       "Predictive analytics & fault detection, Real-time monitoring and intelligent alerts, AI-driven process automation ensuring zero-downtime operations.",
     category: "Cloud & AI",
-    href: "/solutions/enterprise-networking",
+    href: "/services/ai-capabilities",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -208,7 +208,7 @@ export const allServices: ServiceItem[] = [
     description:
       "Harness the power of artificial intelligence with Orva to drive smarter decisions, predictive insights, and intelligent business outcomes. Our AI systems analyze, learn, and adapt.",
     category: "Cloud & AI",
-    href: "/solutions/enterprise-networking",
+    href: "/services/ai-solutions",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -223,7 +223,7 @@ export const allServices: ServiceItem[] = [
     description:
       "Track performance, monitor usage, and identify trends with real-time dashboards and detailed reports. Orva's analytics suite empowers you with data to optimize operations.",
     category: "Cloud & AI",
-    href: "/solutions/enterprise-networking",
+    href: "/services/analytics-reporting",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -238,7 +238,7 @@ export const allServices: ServiceItem[] = [
     description:
       "Every industry has unique needs. That's why we deliver tailor-made IoT deployments for sectors like healthcare, manufacturing, logistics, agriculture, and retail.",
     category: "IoT & OT",
-    href: "/industries",
+    href: "/services/custom-industry-solutions",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -253,7 +253,7 @@ export const allServices: ServiceItem[] = [
     description:
       "Combine the power of the cloud with the speed of edge computing. Orva enables real-time processing at the edge while maintaining centralized control and storage in the cloud.",
     category: "Cloud & AI",
-    href: "/solutions/enterprise-networking",
+    href: "/services/cloud-edge-computing",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -268,7 +268,7 @@ export const allServices: ServiceItem[] = [
     description:
       "Security is baked into every layer of our IoT solutions-from device-level encryption and identity management to secure cloud gateways and real-time threat monitoring.",
     category: "Security",
-    href: "/solutions/cybersecurity",
+    href: "/services/end-to-end-security",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -283,7 +283,7 @@ export const allServices: ServiceItem[] = [
     description:
       "We use AI and machine learning to convert raw IoT data into powerful business insights. Our systems detect patterns, predict outcomes, and enable automated decision-making.",
     category: "Cloud & AI",
-    href: "/solutions/enterprise-networking",
+    href: "/services/ai-data-insights",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
@@ -299,7 +299,7 @@ export const allServices: ServiceItem[] = [
     description:
       "Orva integrates a wide range of IoT-enabled devices-sensors, actuators, controllers, and smart appliances-into a unified system with real-time data flow and interoperability.",
     category: "IoT & OT",
-    href: "/solutions/industrial-utility-it",
+    href: "/services/smart-device-integration",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -314,7 +314,7 @@ export const allServices: ServiceItem[] = [
     description:
       "We design secure, scalable, and high-performance IoT networks that serve as the foundation for seamless device connectivity, low-latency communication, and future readiness.",
     category: "IoT & OT",
-    href: "/solutions/industrial-utility-it",
+    href: "/services/iot-network-design",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
@@ -329,7 +329,7 @@ export const allServices: ServiceItem[] = [
     description:
       "HD video conferencing systems with intelligent cameras, noise-cancelling microphones, and real-time collaboration tools-perfect for hybrid and remote teams.",
     category: "Collaboration",
-    href: "/solutions/wireless-smart-campus",
+    href: "/services/video-conferencing",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -344,7 +344,7 @@ export const allServices: ServiceItem[] = [
     description:
       "Professional AV setups for conference rooms, training areas, and public displays. Solutions include high-quality sound systems, projectors, and interactive screens.",
     category: "Collaboration",
-    href: "/solutions/wireless-smart-campus",
+    href: "/services/audio-visual-av",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />

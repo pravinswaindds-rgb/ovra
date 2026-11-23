@@ -138,6 +138,10 @@ export const allServiceSlugs = [
   "iot-network-design",
   "video-conferencing",
   "audio-visual-av",
+  "enterprise-networking",
+  "cybersecurity",
+  "wireless-smart-campus",
+  "industrial-utility-it",
 ];
 
 // Helper function to resolve slug or alias
