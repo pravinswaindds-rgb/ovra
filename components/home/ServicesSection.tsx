@@ -52,7 +52,7 @@ export function ServicesSection() {
   return (
     <section id="services" className="bg-[#F8FAFC] py-20 lg:py-28 text-slate-900 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#00875A] block mb-2">
